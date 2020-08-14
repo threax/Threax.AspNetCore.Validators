@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>2.0.1</Version>
+    <Version>2.0.2-pre01</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
@@ -12,10 +12,10 @@
     <Description>Additional validators for asp.net core.</Description>
     <PackageProjectUrl>https://github.com/threax/Threax.AspNetCore.Validators</PackageProjectUrl>
     <RepositoryUrl>https://github.com/threax/Threax.AspNetCore.Validators</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/threax/Threax.AspNetCore.Validators/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0" />
   </ItemGroup>
 
